@@ -95,7 +95,7 @@ namespace Nepesseg
 
         public bool FoVaros30_koncentracio()
         {
-            return Convert.ToDouble(Nepesseg)/100*30<FoVarosNepesseg;
+            return Convert.ToDouble(Nepesseg)*0.3<FoVarosNepesseg;
         }
     }
 }
