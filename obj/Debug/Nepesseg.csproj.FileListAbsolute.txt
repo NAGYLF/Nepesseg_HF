@@ -1,0 +1,7 @@
+C:\Users\LEVIS\source\repos\Nepesseg\bin\Debug\Nepesseg.exe.config
+C:\Users\LEVIS\source\repos\Nepesseg\bin\Debug\Nepesseg.exe
+C:\Users\LEVIS\source\repos\Nepesseg\bin\Debug\Nepesseg.pdb
+C:\Users\LEVIS\source\repos\Nepesseg\obj\Debug\Nepesseg.csproj.AssemblyReference.cache
+C:\Users\LEVIS\source\repos\Nepesseg\obj\Debug\Nepesseg.csproj.CoreCompileInputs.cache
+C:\Users\LEVIS\source\repos\Nepesseg\obj\Debug\Nepesseg.exe
+C:\Users\LEVIS\source\repos\Nepesseg\obj\Debug\Nepesseg.pdb
