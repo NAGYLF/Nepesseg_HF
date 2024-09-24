@@ -16,6 +16,9 @@ namespace Nepesseg
             beolvasas();
             f3();
             f4();
+            f5();
+            f6();
+            f7();
             Console.ReadLine();
         }
 
@@ -43,7 +46,27 @@ namespace Nepesseg
         }
         static void f5()
         {
-
+            Console.WriteLine("f5");
+            Console.WriteLine($"A vizsgálat idején {adatok.Find(item => item.Orszag == "Kína").Nepesseg - adatok.Find(item => item.Orszag == "India").Nepesseg} fővel éltek többen Kínában mint indiában");
+            Console.WriteLine();
+        }
+        static void f6()
+        {
+            Console.WriteLine("f6");
+            Adat ideiglenef6 = adatok.Find(item7 => item7.Nepesseg == (adatok.FindAll(item => item.Nepesseg != adatok.Max(item2 => item2.Nepesseg)).FindAll(item3 => item3.Nepesseg != adatok.FindAll(item => item.Nepesseg != adatok.Max(item4 => item4.Nepesseg)).Max(item5 => item5.Nepesseg))).Max(item6 => item6.Nepesseg));
+            Console.WriteLine($"A 3. legnépesebb ország: {ideiglenef6.Orszag} népessége: {ideiglenef6.Nepesseg}");
+            Console.WriteLine();
+        }
+        static void f7()
+        {
+            Console.WriteLine("f7");
+            List<Adat> ideiglenesf7 = adatok.FindAll(item=>item.FoVaros30_koncentracio());
+            Console.WriteLine("A következő országok lakossága több mint 30% a fővárosban lakik:");
+            foreach (Adat item in ideiglenesf7)
+            {
+                Console.WriteLine($"{"\t"}{item.Orszag}  ({item.FoVaros})");
+            }
+            Console.WriteLine();
         }
     }
 
@@ -62,12 +85,17 @@ namespace Nepesseg
             Terulet = int.Parse(tomb[1]);
             Nepesseg = int.Parse(tomb[2].Contains("g") ? tomb[2].Replace("g","0000") : tomb[2] );
             FoVaros = tomb[3];
-            FoVarosNepesseg = int.Parse(tomb[4]);
+            FoVarosNepesseg = int.Parse(tomb[4])*1000;
         }
 
         public double nepsuruseg()
         {
             return Math.Round(Convert.ToDouble(Nepesseg) / Convert.ToDouble(Terulet),0);
+        }
+
+        public bool FoVaros30_koncentracio()
+        {
+            return Convert.ToDouble(Nepesseg)/100*30<FoVarosNepesseg;
         }
     }
 }
